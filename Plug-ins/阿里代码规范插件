@@ -1,0 +1,108 @@
+阿里代码规范插件
+本着 Android 开发的视角，这里只介绍如何在 Android Studio 中使用 Alibaba Java Coding Guidelines（以下简称阿里规约插件）。其他工具，请翻阅文档。
+3.1 搜索插件
+依次选择：Setting >> Plugins >> Browse repositories .
+
+1.GsonFormat
+快速将json字符串转换成一个Java Bean，免去我们根据json字符串手写对应Java Bean的过程。
+
+使用方法：快捷键Alt+S也可以使用Alt+Insert选择GsonFormat
+
+配合ButterKnife实现注解，从此不用写findViewById，想着就爽啊。在Activity，Fragment，Adapter中选中布局xml的资源id自动生成butterknife注解。
+
+使用方法：Ctrl+Shift+B选择图上所示选项
+
+3.Android Code Generator
+根据布局文件快速生成对应的Activity，Fragment，Adapter，Menu。
+
+
+
+4.Android Parcelable code generator
+JavaBean序列化，快速实现Parcelable接口。
+
+
+11.JsonOnlineViewer
+在Android Studio中请求、调试接口
+
+12.Android Styler
+根据xml自动生成style代码的插件
+
+
+
+
+
+Usage:
+a. copy lines with future style from your layout.xml file
+b. paste it to styles.xml file with Ctrl+Shift+D (or context menu)
+c. enter name of new style in the modal window
+d. your style is prepared!
+
+29.Android DPI Calculator
+DPI计算插件
+
+使用：
+
+
+或者
+
+
+
+Android Studio Prettify
+可以将代码中的字符串写在string.xml文件中
+选中字符串鼠标右键选择图中所示
+
+这个插件还可以自动书写findViewById
+
+
+
+
+
+
+
+.ignore
+我们都知道在Git 中想要过滤掉一些不想提交的文件，可以把相应的文件添加到.gitignore 中，而.gitignore 这个Android Studio 插件根据不同的语言来选择模板，就不用自己在费事添加一些文件了，而且还有自动补全功能，过滤文件再也不要复制文件名了。我们做项目的时候，并不是所有文件都是要提交的，比如构建的build 文件夹，本地配置文件，每个Module 生成的iml 文件，但是我们每次add，commit 都会不小心把它们添加上去，而gitignore 就是解决这种痛点的，如果你不想提交的文件，就可以在创建项目的时候将这个文件中添加即可，将一些通用的东西屏蔽掉。
+
+
+
+
+
+Translation
+Android Studio Plugin,Translate English to Chinese. Android Studio 翻译插件,可以将英文翻译为中文。
+
+
+
+PermissionsDispatcher plugin
+github:PermissionsDispatcher plugin
+自动生成6.0权限的代码
+
+
+
+61.CodeMaker
+一个 IDEA 的代码生成插件，通过 Velocity 支持自定义代码模板来生成代码。详细介绍IDEA代码生成插件CodeMaker
+
+62.adb idea
+可以一键清理缓存并重启APP
+
+此插件来自zhoutianling@ltbl.cn的分享，感谢zhoutianling@ltbl.cn的分享
+TemplateBuilder
+TemplateBuilder是一款能够帮助我们快速生成Android Studio Template的AS插件，将通过逐个文件去配置模板的方式改进为通过插件来实现，对于简单的模板制作，只需要一键即可生成。
+
+
+AndroidSourceViewer
+在线查看 Android 和 Java 指定版本源码插件
+ok gradle
+用于快速搜索 maven 库引用
+Android-Resource-Usage-Count
+一款Android资源引用数目统计插件
+json2java4idea
+一个帮助你将json生成java类的Android Studio / IDEA 插件。
+TranslationPlugin
+IntelliJ IDEA/Android Studio 翻译插件，支持中英互译、单词朗读
+GenerateSerialVersionUID
+实现Serializable序列化bean
+Lifecycle-Sorter
+可以根据Activity或者fragment的生命周期对其生命周期方法位置进行先后排序， 快捷键Ctrl + alt + K
+JsonOnlineViewer
+可实现直接在android studio中调试接口数据，可以选择请求类型，自定义请求头及请求体，json数据格式化后展示
+Android Drawable Importer
+为了适应所有Android屏幕的大小和密度，每个Android项目都会包含drawable文件夹。任何具备Android开发经验的开发人员都知道，为了支持所有的屏幕尺寸，你必须给每个屏幕类型导入不同的画板。Android Drawable Importer插件能让这项工作变得更容易。它可以减少导入缩放图像到Android项目所需的工作量。Android Drawable Importer添加了一个在不同分辨率导入画板或缩放指定图像到定义分辨率的选项。这个插件加速了开发人员的画板工作。
