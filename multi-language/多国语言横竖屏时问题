@@ -1,1 +1,28 @@
 
+问题重现：
+
+　●　手机系统语言设置为中文
+　●　启动app，app显示中文
+　●　在app中设置app的语言为其他国家语言
+  ●　由于界面语言要重新加载，所以关闭所有Activity(界面),并跳转到登陆界面，重新进入子界面都显示为英文
+　●　出现的问题：当界面由竖屏改为横屏时，界面本来显示英文，结果一下子就自动切换为中文。
+
+问题原因：
+　●　在屏幕旋转时触发onConfigurationChanged(Configuration newConfig)方法时，这个newConfig取的是系统的，因此界面就显示为中文
+
+解决方法：
+
+○　在Application的实现类中，重写onConfigurationChanged(Configuration newConfig)方法
+public class **Application extends Application {
+    @Override
+    public void onCreate() {             
+         ......
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        String languageCode = ...// 要设置的新的语言编码
+        updateLanguage(this, languageCode);//代码内容见【问题重现】
+    }
+}
